@@ -7,7 +7,7 @@ def scrape_pokemon_data(url):
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
         pokemon_data = {}
-        # Nome e número na Pokédex
+        # Nome e número na Pokédex#
         name = soup.find('h1', class_="pokemon-name").text.strip()
         pokedex_number = soup.find('span', class_='pokemon-number').text.strip()
         pokemon_data['name'] = name
